@@ -1,4 +1,5 @@
-#Example : calculator
+
+# Example : calculator
 
 This example takes advantage of the **calculator** example web service that is built into
 RTCP and includes:
@@ -63,6 +64,6 @@ After download of the Examples project, the folder structure for the calculator 
 - run startCalculatorInTestMode.bat
 - using the calculator application will results in operations being shown in the Events View window of RIT
 
-##Further reading
+## Further reading
  - TechNote : [Message filtering and validation](http://www-01.ibm.com/support/docview.wss?uid=swg21669000)
  - developerWorks article :  [Virtualize multiple behaviors in parallel with Rational Test Virtualization Server](http://www.ibm.com/developerworks/rational/library/multiple-behaviors-parallel-test-virtualization-server/index.html)
