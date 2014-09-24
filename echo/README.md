@@ -13,7 +13,7 @@ After download of the Examples project the folder structure for the echo example
         rit-projects
             rit-project-echo.zip
                 
-- Unzip rit-projects/rit-project-calculator.zip. This contains a RIT project calculator.ghp
+- Unzip rit-projects/rit-project-echo.zip. This contains a RIT project echo.ghp
 
 ## Basic usage 
 - Start RIT
