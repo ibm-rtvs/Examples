@@ -5,9 +5,9 @@ RTCP and includes:
 
 - A RIT project which contains a test to exercise the *echo* operation of the web service.
 
-## Installation Instructions (DevOps Services)
-- Right click the  **echo** folder , then Export->download->Zip
-- When downloaded, unzip it
+## Post download instructions
+
+After download of the Examples project the folder structure for the echo example is:
 
     echo
         rit-projects
@@ -15,7 +15,7 @@ RTCP and includes:
                 
 - Unzip rit-projects/rit-project-calculator.zip. This contains a RIT project calculator.ghp
 
-# Basic usage 
+## Basic usage 
 - Start RIT
 - Select Open, then navigate to the echo/echo.ghp file
 - Go to "Test Lab" (F11)

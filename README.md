@@ -13,6 +13,22 @@ The following diagram shows how RTCP might be deployed in a RTVS Environment.
 
 This project contains ready-to-use examples that showcase features of RTCP and RIT.
 
+***
+## Download instructions
+
+- Go to GitHub project [https://github.com/ibm-rtvs/Examples](https://github.com/ibm-rtvs/Examples) and select *Download ZIP*
+- Unzip on a computer which has the following prerequisite software installed
+	- Rational Integration Tester v6.0.1
+	- Rational Integration Platform Pack v6.0.1
+	- Rational Integration Tester Agent v6.0.1
+	- Rational Test Control Panel v6.0.1 
+
+
+All examples assume that the prerequisite software was installed with the default options. Most notably
+- Rational Test Control Panel port is 3178
+- HTTP proxy port is 3128
+  
+
 *** 
 ## Examples
 
@@ -37,7 +53,6 @@ Though the application itself remains unchanged, it can be launched in one of tw
 
 - A RIT project which contains
 	- A test suite which exercises basic calculator operations of the web service.
-	- A monitor definition
 	- A stub which simulates all of the operations of the calculator web service
     - A partial stub which lets most operations [pass-through](http://www-01.ibm.com/support/knowledgecenter/SSBLQQ_8.6.0/com.ibm.rational.rtvs.ref.doc/topics/c_rtvsref_sift_passthrough.html?lang=en "sift-and-pass-through") to the actual web service
       but intercepts a specific operation to return an unexpected value
