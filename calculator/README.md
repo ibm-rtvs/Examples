@@ -135,7 +135,25 @@ To confirm that the VirtualCalculator is, in fact, being used:
  - See stubbing activity in [RTCP > administration > activity](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Administration:activity)
  - Click ![Spyglass](spyglass.png "view deployed projects and stubs") against RTVS on [RTCP > Home > Agents](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Agents:) to view deployed projects and stubs of the RTVS Agent.
 
+# How it works
 
-## Further reading
+## How does the calculator app traffic get routed via the proxy in 'Test Mode' without needing to change the app?
+
+Compare the two startup scripts **startCalulator** and **startCalculatorInTestMode**. 
+You'll find the only really difference is the addition of two [java networking properties](http://docs.oracle.com/javase/7/docs/api/java/net/doc-files/net-properties.html) in
+the startup script
+
+   -Dhttp.proxyHost=localhost -Dhttp.proxyPort=**3128**
+
+During the default installation process for *Rational Integration Platform Pack* a default http proxy is installed and autostarted.
+This proxy's configuration is determined by the contents of RIT-Platform/httptcp/registration.xml
+
+    <server base-url="http://localhost:7819/RTCP"/>
+	<http-proxy port="3128" bind-address="">
+	</http-proxy>	
+
+Port 3128 is the default port that is used to manage http traffic, in conjunction with the associated RTCP instance (default is http://localhost:7819/RTCP) 
+
+# Further reading
  - TechNote : [Message filtering and validation](http://www-01.ibm.com/support/docview.wss?uid=swg21669000)
  - developerWorks article :  [Virtualize multiple behaviors in parallel with Rational Test Virtualization Server](http://www.ibm.com/developerworks/rational/library/multiple-behaviors-parallel-test-virtualization-server/index.html)
