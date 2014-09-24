@@ -25,7 +25,7 @@ This project contains ready-to-use examples that showcase features of RTCP and R
 
 
 All examples assume that the prerequisite software was installed with the default options. Most notably
-- Rational Test Control Panel port is 3178
+- Rational Test Control Panel port is 7189
 - HTTP proxy port is 3128
   
 
