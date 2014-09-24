@@ -85,7 +85,7 @@ You can have it run within RIT, however it will only run for 5 minutes.
 
 To confirm that the VirtualCalculator is, in fact, being used:
 
- - See stubbing activity in [RTCP > administration > activity](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Administration:activity)
+ - See stubbing activity in [RTCP > administration > activity](http://localhost:7819/RTCP/#Administration:activity)
 
 
 ## Temporarily replacing the calculator web service with the "2+2=5" stub (for 5 minutes)
@@ -111,7 +111,7 @@ web service, except in the condition where the operation is 2+2. In this case it
 To confirm that the "2+2=5" stub is, in fact, being used:
 
  - Use the calculator to confirm that performing the calculation 2+2 returns the value 5.
- - See stubbing activity in [RTCP > administration > activity](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Administration:activity)
+ - See stubbing activity in [RTCP > administration > activity](http://localhost:7819/RTCP/#Administration:activity)
 
 ## Replacing the calculator web service with the "VirtualCalculator" stub, deployed to an agent.
 
@@ -124,7 +124,7 @@ The stub will run indefinitely.
 - Right click on Logical/calculator/Stubs/VirtualCalculator
 - Select *Run...*
 - Select Execution preference of *Run later*, then Press run.
-- View [RTCP > Home > Environments > domain1 > calculator](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Environments:domain1/calculator) and
+- View [RTCP > Home > Environments > domain1 > calculator](http://localhost:7819/RTCP/#Environments:domain1/calculator) and
 wait until all operations are being *Satisfied By* the **VirtualCalculator 1.0** and their status is *Ready*
 - Open a command prompt
 - change directory to Examples/Calculator/applications/client
@@ -132,8 +132,8 @@ wait until all operations are being *Satisfied By* the **VirtualCalculator 1.0**
 
 To confirm that the VirtualCalculator is, in fact, being used:
 
- - See stubbing activity in [RTCP > administration > activity](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Administration:activity)
- - Click ![Spyglass](spyglass.png "view deployed projects and stubs") against RTVS on [RTCP > Home > Agents](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Agents:) to view deployed projects and stubs of the RTVS Agent.
+ - See stubbing activity in [RTCP > administration > activity](http://localhost:7819/RTCP/#Administration:activity)
+ - Click ![Spyglass](spyglass.png "view deployed projects and stubs") against RTVS on [RTCP > Home > Agents](http://localhost:7819/RTCP/#Agents:) to view deployed projects and stubs of the RTVS Agent.
 
 # How it works
 
