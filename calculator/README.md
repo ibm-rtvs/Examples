@@ -6,18 +6,18 @@ RTCP and includes:
  
 - A Java calculator application which uses the *calculator* web service to perform mathematical calculations.
 Though the application itself remains unchanged, it can be launched in one of two modes.
-	- Normal mode where it connects directly to the web service
-	- Test mode, where trafic is routed through through a RIT proxy. 
+	- Normal mode where it connects directly to the web service.
+	- Test mode, where traffic is routed through through a RIT proxy. 
 	This facilitates both tracing at the operational level and use of the stubs provided.	
 
 ![Calculator](calculator.png "The calculator app")	
 
 - A RIT project which contains
 	- A test suite which exercises basic calculator operations of the web service.
-	- Monitor definitions for all of the calculator operations
-	- A stub which simulates all of the operations of the calculator web service
+	- Monitor definitions for all of the calculator operations.
+	- A stub which simulates all of the operations of the calculator web service.
     - A partial stub which lets most operations [pass-through](http://www-01.ibm.com/support/knowledgecenter/SSBLQQ_8.6.0/com.ibm.rational.rtvs.ref.doc/topics/c_rtvsref_sift_passthrough.html?lang=en "sift-and-pass-through") to the actual web service
-      but intercepts a specific operation to return an unexpected value
+      but intercepts a specific operation to return an unexpected value.
 
 Integrated web service examples may be found at [http://localhost:7819/RTCP/examples/](http://localhost:7819/RTCP/examples/)
 The *Calculator* web service provides stateless methods Add, Divide, Modulus, Multiply and Substract.
@@ -38,31 +38,103 @@ After download of the Examples project, the folder structure for the calculator 
                 startCalculator.bat  
                 startCalculatorInTestMode.bat 
                 
-- Unzip rit-projects/rit-project-calculator.zip. This contains a RIT project calculator.ghp                
-- Download the required Axis2 libraries from [http://axis.apache.org/axis2/java/core/download.cgi#a1_6_2](http://axis.apache.org/axis2/java/core/download.cgi#a1_6_2) and unzip into the calculator/applications/client folder                
+- Unzip rit-projects/rit-project-calculator.zip. This contains a RIT project calculator.ghp.                
+- Download the required Axis2 libraries from [http://axis.apache.org/axis2/java/core/download.cgi#a1_6_2](http://axis.apache.org/axis2/java/core/download.cgi#a1_6_2) and unzip into the calculator/applications/client folder.                
+
+## Running the calculator application
+- Open a command prompt.
+- change directory to Examples/Calculator/applications/client.
+- run startCalculator.bat.
 
 ## Running the test suite
+- Start RIT.
+- Select Open, then navigate to the calculator/calculator.ghp file. 
+- Go to "Test Lab" (F11).
+- Right click on Logical/calculator/Suites/BasicTests.
+- Select *Run*.
+- The BasicTests suite, which consists of 5 tests shows 100% complete.
+
+## Recording the calculator application
+- Start RIT.
+- Select Open, then navigate to the calculator/calculator.ghp file. 
+- Go to "Recording Studio" (F9).
+- In the Events Monitors window import monitors from file *monitors.rsh*. 
+- Select *Record*.
+- Open a command prompt.
+- Change directory to Examples/Calculator/applications/client.
+- Run startCalculatorInTestMode.bat.
+- Using the calculator application will results in operations being shown in the Events View window of RIT.
+
+
+## Temporarily replacing the calculator web service with the "VirtualCalculator" stub (for 5 minutes)
+
+As a quick test you can try out the VirtualCalculator stub without deploying it. 
+You can have it run within RIT, however it will only run for 5 minutes. 
+ In this mode, the transaction throughput of the stub is also throttled.
+
+- Start RIT.
+- Select Open, then navigate to the calculator/calculator.ghp file. 
+- Go to "Test Lab" (F11).
+- Right click on Logical/calculator/Stubs/VirtualCalculator.
+- Select *Run*.
+- Wait until all parts of the stub are showing *ready* status in the Task Monitor window.
+- Open a command prompt.
+- Change directory to Examples/Calculator/applications/client.
+- Run startCalculatorInTestMode.bat
+- Using the calculator application will results in increments of progress being shown in the Console window of RIT.
+
+To confirm that the VirtualCalculator is, in fact, being used:
+
+ - See stubbing activity in [RTCP > administration > activity](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Administration:activity)
+
+
+## Temporarily replacing the calculator web service with the "2+2=5" stub (for 5 minutes)
+
+As a quick test you can try out the "2+2=5" stub without deploying it. 
+You can have it run within RIT, however it will only run for 5 minutes. 
+In this mode, the transaction throughput of the stub is also throttled.
+
+The "2+2=5" stub uses the [sift-and-pass-through](http://www-01.ibm.com/support/knowledgecenter/SSBLQQ_8.6.0/com.ibm.rational.rtvs.ref.doc/topics/c_rtvsref_sift_passthrough.html?lang=en "sift-and-pass-through") facility in RTVS to allow all mathematical operations to pass through to the real calculator
+web service, except in the condition where the operation is 2+2. In this case it returns the value 5. 
+
 - Start RIT
 - Select Open, then navigate to the calculator/calculator.ghp file 
 - Go to "Test Lab" (F11)
-- Right click on Suites/BasicTests
-- The BasicTests suite, which consists of 5 tests shows 100% complete.
-
-## Running the calculator application
+- Right click on Logical/calculator/Stubs/VirtualCalculator
+- Select *Run*
+- Wait until all parts of the stub are showing *Ready* status in the Task Monitor window.
 - Open a command prompt
-- change directory to Examples/Calculator/applications/client
-- run startCalculator.bat
+- Change directory to Examples/Calculator/applications/client
+- Run startCalculatorInTestMode.bat
+- Using the calculator application will results in increments of progress being shown in the Console window of RIT
 
-## Recording the calculator application
+To confirm that the "2+2=5" stub is, in fact, being used:
+
+ - Use the calculator to confirm that performing the calculation 2+2 returns the value 5.
+ - See stubbing activity in [RTCP > administration > activity](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Administration:activity)
+
+## Replacing the calculator web service with the "VirtualCalculator" stub, deployed to an agent.
+
+In this section we deploy the stub to an agent running on the same computer. 
+The stub will run indefinitely.
+
 - Start RIT
 - Select Open, then navigate to the calculator/calculator.ghp file 
-- Go to "Recording Studio" (F9)
-- In the Events Monitors window import monitors from file *monitors.rsh* 
-- Select *Record*
+- Go to "Test Lab" (F11)
+- Right click on Logical/calculator/Stubs/VirtualCalculator
+- Select *Run...*
+- Select Execution preference of *Run later*, then Press run.
+- View [RTCP > Home > Environments > domain1 > calculator](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Environments:domain1/calculator) and
+wait until all operations are being *Satisfied By* the **VirtualCalculator 1.0** and their status is *Ready*
 - Open a command prompt
 - change directory to Examples/Calculator/applications/client
 - run startCalculatorInTestMode.bat
-- using the calculator application will results in operations being shown in the Events View window of RIT
+
+To confirm that the VirtualCalculator is, in fact, being used:
+
+ - See stubbing activity in [RTCP > administration > activity](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Administration:activity)
+ - Click ![Spyglass](spyglass.png "view deployed projects and stubs") against RTVS on [RTCP > Home > Agents](http://jkelly-w520.hursley.ibm.com:7819/RTCP/#Agents:) to view deployed projects and stubs of the RTVS Agent.
+
 
 ## Further reading
  - TechNote : [Message filtering and validation](http://www-01.ibm.com/support/docview.wss?uid=swg21669000)
