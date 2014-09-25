@@ -38,7 +38,7 @@ After download of the Examples project, the folder structure for the calculator 
                 startCalculatorInTestMode.bat 
                 
 - Unzip rit-projects/rit-project-calculator.zip. This contains a RIT project calculator.ghp.                
-- Download the required Axis2 libraries from [http://axis.apache.org/axis2/java/core/download.cgi#a1_6_2](http://axis.apache.org/axis2/java/core/download.cgi#a1_6_2) and unzip into the calculator/applications/client folder.                
+- Download the required Apache Axis2 libraries from [http://axis.apache.org/axis2/java/core/download.cgi#a1_6_2](http://axis.apache.org/axis2/java/core/download.cgi#a1_6_2) and unzip into the calculator/applications/client folder.                
 
 ## Running the calculator application
 - Open a command prompt.
@@ -138,14 +138,14 @@ To confirm that the VirtualCalculator is, in fact, being used:
 
 ## How does the calculator app traffic get routed via the proxy in 'Test Mode' without needing to change the app?
 
-Compare the two startup scripts **startCalulator** and **startCalculatorInTestMode**. 
+Compare the two startup scripts, **startCalulator** and **startCalculatorInTestMode**. 
 You'll find the only really difference is the addition of two [java networking properties](http://docs.oracle.com/javase/7/docs/api/java/net/doc-files/net-properties.html) in
-the startup script
+the startup script.
 
-   -Dhttp.proxyHost=localhost -Dhttp.proxyPort=**3128**
+    -Dhttp.proxyHost=localhost -Dhttp.proxyPort=**3128**
 
-During the default installation process for *Rational Integration Platform Pack* a default http proxy is installed and autostarted.
-This proxy's configuration is determined by the contents of RIT-Platform/httptcp/registration.xml
+During the default installation process for *Rational Integration Platform Pack* a default http proxy is installed and auto-started.
+This proxy's configuration is determined by the contents of RIT-Platform/httptcp/registration.xml.
 
     <server base-url="http://localhost:7819/RTCP"/>
 	<http-proxy port="3128" bind-address="">
@@ -154,5 +154,5 @@ This proxy's configuration is determined by the contents of RIT-Platform/httptcp
 Port 3128 is the default port that is used to manage http traffic, in conjunction with the associated RTCP instance (default is http://localhost:7819/RTCP) 
 
 # Further reading
- - TechNote : [Message filtering and validation](http://www-01.ibm.com/support/docview.wss?uid=swg21669000)
- - developerWorks article :  [Virtualize multiple behaviors in parallel with Rational Test Virtualization Server](http://www.ibm.com/developerworks/rational/library/multiple-behaviors-parallel-test-virtualization-server/index.html)
+ - TechNote : [Message filtering and validation](http://www-01.ibm.com/support/docview.wss?uid=swg21669000).
+ - developerWorks article :  [Virtualize multiple behaviors in parallel with Rational Test Virtualization Server](http://www.ibm.com/developerworks/rational/library/multiple-behaviors-parallel-test-virtualization-server/index.html).

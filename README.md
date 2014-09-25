@@ -19,7 +19,7 @@ This project contains ready-to-use examples that showcase features of RTCP and R
 - Go to GitHub project [https://github.com/ibm-rtvs/Examples](https://github.com/ibm-rtvs/Examples) and select *Download ZIP*
 - Unzip on a computer which has the following prerequisite software installed
 	- Rational Integration Tester
-	- Rational Integration Platform Pack
+	- Rational Integration Tester Platform Pack
 	- Rational Integration Tester Agent
 	- Rational Test Control Panel 
 
