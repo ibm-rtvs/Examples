@@ -142,7 +142,7 @@ Compare the two startup scripts, **startCalulator** and **startCalculatorInTestM
 You'll find the only really difference is the addition of two [java networking properties](http://docs.oracle.com/javase/7/docs/api/java/net/doc-files/net-properties.html) in
 the startup script.
 
-    -Dhttp.proxyHost=localhost -Dhttp.proxyPort=**3128**
+    -Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128
 
 During the default installation process for *Rational Integration Platform Pack* a default http proxy is installed and auto-started.
 This proxy's configuration is determined by the contents of RIT-Platform/httptcp/registration.xml.
