@@ -1,10 +1,16 @@
 
 # Example : echo 
 
-This example takes advantage of the **echo** example web service that is built into
+This example takes advantage of the **echo** example web service that is integrated into
 RTCP and includes: 
 
 - A RIT project which contains a test to exercise the *echo* operation of the web service.
+
+The integrated web service examples can be found at [http://localhost:7819/RTCP/examples/](http://localhost:7819/RTCP/examples/). 
+The *echo* web service provides an echo operation which simple returns any string it is sent. The definition of the
+service can be found here [http://localhost:7819/RTCP/examples/echo/echoService/echo.wsdl](http://localhost:7819/RTCP/examples/echo/echoService/echo.wsdl). 
+It is this definition that was used to create the test.  
+ 
 
 ## Post download instructions
 

@@ -1,7 +1,7 @@
 
 # Example : calculator
 
-This example takes advantage of the **calculator** example web service that is built into
+This example takes advantage of the **calculator** example web service that is integrated into
 RTCP and includes:
  
 - A Java calculator application which uses the *calculator* web service to perform mathematical calculations.
@@ -19,10 +19,9 @@ Though the application itself remains unchanged, it can be launched in one of tw
     - A partial stub which lets most operations [pass-through](http://www-01.ibm.com/support/knowledgecenter/SSBLQQ_8.6.0/com.ibm.rational.rtvs.ref.doc/topics/c_rtvsref_sift_passthrough.html?lang=en "sift-and-pass-through") to the actual web service
       but intercepts a specific operation to return an unexpected value.
 
-Integrated web service examples may be found at [http://localhost:7819/RTCP/examples/](http://localhost:7819/RTCP/examples/)
-The *Calculator* web service provides stateless methods Add, Divide, Modulus, Multiply and Substract.
-
-The definition of the service can be found here [http://localhost:7819/RTCP/examples/calculator/calculatorService/calculator.wsdl]([http://localhost:7819/RTCP/examples/calculator/calculatorService/calculator.wsdl])
+The integrated web service examples can be found at [http://localhost:7819/RTCP/examples/](http://localhost:7819/RTCP/examples/)
+The *calculator* web service provides state-less operations Add, Divide, Modulus, Multiply and Subtract. The definition of 
+the service can be found here [http://localhost:7819/RTCP/examples/calculator/calculatorService/calculator.wsdl](http://localhost:7819/RTCP/examples/calculator/calculatorService/calculator.wsdl). 
 It is this definition that was used to create the test.  
  
 ## Post download instructions

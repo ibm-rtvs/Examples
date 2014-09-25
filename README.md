@@ -34,14 +34,14 @@ All examples assume that the prerequisite software was installed with the defaul
 *** 
 ## Examples
 
-*echo*
+[*echo*](echo/README.md)
 
 This example takes advantage of the **echo** example web service that is built into
 RTCP and includes: 
 
 - A RIT project which contains a test to exercise the *echo* operation of the web service.
 
-*calculator* 
+[*calculator*](calculator/README.md)
 
 This example takes advantage of the **calculator** example web service that is built into
 RTCP and includes:
