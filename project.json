@@ -1,1 +1,9 @@
-{"Name": "rtvs | Examples"}
+{ "name": "rtvs | Examples",
+  "version" : "0.1-alpha",
+  "dependencies": {
+    "Rational Integration Tester": "6.0.1",
+    "Rational Integration Platform Pack": "6.0.1",
+    "Rational Integration Tester Agent": "6.0.1",
+    "Rational Test Control Panel": "6.0.1"
+  }
+}
