@@ -139,7 +139,7 @@ To confirm that the VirtualCalculator is, in fact, being used:
 ## How does the calculator app traffic get routed via the proxy in 'Test Mode' without needing to change the app?
 
 Compare the two startup scripts, **startCalulator** and **startCalculatorInTestMode**. 
-You'll find the only really difference is the addition of two [java networking properties](http://docs.oracle.com/javase/7/docs/api/java/net/doc-files/net-properties.html) in
+You'll find the only real difference is the addition of two [java networking properties](http://docs.oracle.com/javase/7/docs/api/java/net/doc-files/net-properties.html) in
 the startup script.
 
     -Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128
