@@ -54,8 +54,7 @@ RTCP and includes:
 This example takes advantage of the **calculator** example web service that is built into
 RTCP and includes:
  
-- A Java calculator application which uses the *calculator* web service to perform mathematical calculations.
-Though the application itself remains unchanged, it can be launched in one of two modes.
+- A Java calculator application which uses the *calculator* web service to perform mathematical calculations. Though the application itself remains unchanged, it can be launched in one of two modes.
 	- Normal mode where it connects directly to the web service
 	- Test mode, where traffic is routed through through a RIT proxy. 
 	This facilitates both tracing at the operational level and routing operations to the 
