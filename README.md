@@ -1,4 +1,4 @@
-# RTCP & RIT examples
+# RTCP & RIT examples #
 
 IBM® Rational® Test Control Panel (RTCP) is a server-based web application providing
 a central repository for virtualized services. RTCP allows you to use virtual services published 
@@ -12,6 +12,13 @@ The following diagram shows how RTCP might be deployed in a RTVS Environment.
 
 
 This project contains ready-to-use examples that showcase features of RTCP and RIT.
+
+* [Download instructions](#download-instructions)
+* [Examples](#examples)
+ * [echo](#echo)
+  * [calculator](#calculator)
+* [License](#license)
+
 
 ***
 ## Download instructions
@@ -33,16 +40,16 @@ All examples assume that the prerequisite software was installed with the defaul
 
 *** 
 
-## Examples
+## Examples ##
 
-[*echo*](echo/README.md)
+### [*echo*](echo/README.md)
 
 This example takes advantage of the **echo** example web service that is built into
 RTCP and includes: 
 
 - A RIT project which contains a test to exercise the *echo* operation of the web service.
 
-[*calculator*](calculator/README.md)
+### [*calculator*](calculator/README.md)
 
 This example takes advantage of the **calculator** example web service that is built into
 RTCP and includes:
@@ -60,4 +67,11 @@ Though the application itself remains unchanged, it can be launched in one of tw
 	- A stub which simulates all of the operations of the calculator web service
     - A partial stub which lets most operations [pass-through](http://www-01.ibm.com/support/knowledgecenter/SSBLQQ_8.6.0/com.ibm.rational.rtvs.ref.doc/topics/c_rtvsref_sift_passthrough.html?lang=en "sift-and-pass-through") to the actual web service
       but intercepts a specific operation to return an unexpected value
+
+## License ##
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this except in compliance with the License. You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
