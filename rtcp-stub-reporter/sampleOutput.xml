@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <server url="http://localhost:7819/RTCP">
+        <domains>
+            <domain name="calculator">
+                <environments>
+                    <environment name="local">
+                        <components>
+                            <component name="calculator">
+                                <stubs>
+                                    <stub component="calculator" name="VirtualCalculator" operation="" version="1.0">
+                                        <instances/>
+                                    </stub>
+                                    <stub component="calculator" name="2+2=5" operation="" version="1.0">
+                                        <instances/>
+                                    </stub>
+                                </stubs>
+                                <operations>
+                                    <operation name="Divide">
+                                        <stubs>
+                                            <stub component="calculator" name="VirtualCalculator" operation="Divide" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                        </stubs>
+                                    </operation>
+                                    <operation name="Subtract">
+                                        <stubs>
+                                            <stub component="calculator" name="VirtualCalculator" operation="Subtract" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                        </stubs>
+                                    </operation>
+                                    <operation name="Add">
+                                        <stubs>
+                                            <stub component="calculator" name="VirtualCalculator" operation="Add" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                            <stub component="calculator" name="2+2=5" operation="Add" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                        </stubs>
+                                    </operation>
+                                    <operation name="Multiply">
+                                        <stubs>
+                                            <stub component="calculator" name="VirtualCalculator" operation="Multiply" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                        </stubs>
+                                    </operation>
+                                    <operation name="Modulus">
+                                        <stubs>
+                                            <stub component="calculator" name="VirtualCalculator" operation="Modulus" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                        </stubs>
+                                    </operation>
+                                </operations>
+                            </component>
+                        </components>
+                    </environment>
+                    <environment name="test">
+                        <components>
+                            <component name="calculator">
+                                <stubs>
+                                    <stub component="calculator" name="VirtualCalculator" operation="" version="1.0">
+                                        <instances/>
+                                    </stub>
+                                    <stub component="calculator" name="2+2=5" operation="" version="1.0">
+                                        <instances/>
+                                    </stub>
+                                </stubs>
+                                <operations>
+                                    <operation name="Divide">
+                                        <stubs>
+                                            <stub component="calculator" name="VirtualCalculator" operation="Divide" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                        </stubs>
+                                    </operation>
+                                    <operation name="Subtract">
+                                        <stubs>
+                                            <stub component="calculator" name="VirtualCalculator" operation="Subtract" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                        </stubs>
+                                    </operation>
+                                    <operation name="Add">
+                                        <stubs>
+                                            <stub component="calculator" name="VirtualCalculator" operation="Add" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                            <stub component="calculator" name="2+2=5" operation="Add" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                        </stubs>
+                                    </operation>
+                                    <operation name="Multiply">
+                                        <stubs>
+                                            <stub component="calculator" name="VirtualCalculator" operation="Multiply" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                        </stubs>
+                                    </operation>
+                                    <operation name="Modulus">
+                                        <stubs>
+                                            <stub component="calculator" name="VirtualCalculator" operation="Modulus" version="1.0">
+                                                <instances/>
+                                            </stub>
+                                        </stubs>
+                                    </operation>
+                                </operations>
+                            </component>
+                        </components>
+                    </environment>
+                </environments>
+            </domain>
+        </domains>
+    </server>
