@@ -66,6 +66,14 @@ RTCP and includes:
 	- A stub which simulates all of the operations of the calculator web service
     - A partial stub which lets most operations [pass-through](http://www-01.ibm.com/support/knowledgecenter/SSBLQQ_8.6.0/com.ibm.rational.rtvs.ref.doc/topics/c_rtvsref_sift_passthrough.html?lang=en "sift-and-pass-through") to the actual web service
       but intercepts a specific operation to return an unexpected value
+	  
+### [*RTCP stub reporter*](rtcp-stub-reported/README.md)
+
+This example takes advantage of the Stubs REST API that is part of the Rational Test Control Panel. It produces and a simple report in text form containing information about the stubs available and running within the Rational Test Control Panel.
+
+    java -jar RTCPStubReporter.jar
+        Usage: RTCPUrl [Domain name,Environment name];*
+        e.g.: http://localhost:7819/RTCP Domain Name1,Env1;Domain2,Env2
 
 ## License ##
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this except in compliance with the License. You may obtain a copy of the License at
