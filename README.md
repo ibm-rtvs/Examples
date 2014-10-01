@@ -67,7 +67,7 @@ RTCP and includes:
     - A partial stub which lets most operations [pass-through](http://www-01.ibm.com/support/knowledgecenter/SSBLQQ_8.6.0/com.ibm.rational.rtvs.ref.doc/topics/c_rtvsref_sift_passthrough.html?lang=en "sift-and-pass-through") to the actual web service
       but intercepts a specific operation to return an unexpected value
 	  
-### [*RTCP stub reporter*](rtcp-stub-reported/README.md)
+### [*RTCP stub reporter*](rtcp-stub-reporter/README.md)
 
 This example takes advantage of the Stubs REST API that is part of the Rational Test Control Panel. It produces and a simple report in text form containing information about the stubs available and running within the Rational Test Control Panel.
 
