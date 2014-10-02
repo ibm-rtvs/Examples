@@ -25,7 +25,7 @@ h4 { text-indent: 40px;}
           </xsl:for-each>
           </xsl:for-each>
       </xsl:for-each>
-/body>
+</body>
 </html>
 </xsl:template>
 
