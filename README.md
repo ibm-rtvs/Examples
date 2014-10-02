@@ -70,9 +70,11 @@ RTCP and includes:
 	  
 ### [*rtcp-rest-api*](rtcp-rest-api/README.md)
 
-Example takes advantage of the RTCP REST API that is part of the Rational Test Control Panel. 
+Examples that take advantage of the RTCP REST API that is part of the Rational Test Control Panel. 
 
-*stub reporter* produces and a simple report in text form containing information about the stubs available and running within the Rational Test Control Panel.
+#### stub reporter
+
+This produces and a simple report in text form containing information about the stubs available and running within the Rational Test Control Panel.
 
     java -jar stub-reporter.jar
         Usage: RTCPUrl [Domain name,Environment name];*
