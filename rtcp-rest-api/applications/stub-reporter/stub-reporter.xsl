@@ -19,9 +19,10 @@ h4 { text-indent: 40px;}
           <xsl:for-each select="environments/environment">
             <xsl:sort select="@name"/>
             <h3>Environment : <xsl:value-of select="@name"/></h3>
-            <xsl:for-each select="stubs/stub" >
+            <xsl:for-each select="components/component/operations/operation/stubs/stub" >
             <xsl:sort select="@name"/>
-            <h4>Stub : <xsl:value-of select="@name"/></h4>
+            <xsl:sort select="@operation"/>
+            <h4>Stub : <xsl:value-of select="@name"/>, operation : <xsl:value-of select="@operation"/></h4>
           </xsl:for-each>
           </xsl:for-each>
       </xsl:for-each>
