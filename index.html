@@ -53,6 +53,7 @@ virtualized test environments in IBM Rational Test Virtualization Server (RTVS).
 <ul>
 <li><a href="#echo">echo</a></li>
 <li><a href="#calculator">calculator</a></li>
+<li><a href="#rtcp-rest-api">rtcp-rest-api</a></li>
 </ul>
 </li>
 <li><a href="#license">License</a></li>
@@ -120,12 +121,17 @@ but intercepts a specific operation to return an unexpected value</li>
 </ul>
 </li>
 </ul><h3>
-<a name="rtcp-stub-reporter" class="anchor" href="#rtcp-stub-reporter"><span class="octicon octicon-link"></span></a><a href="rtcp-stub-reporter/README.md"><em>RTCP stub reporter</em></a>
+<a name="rtcp-rest-api" class="anchor" href="#rtcp-rest-api"><span class="octicon octicon-link"></span></a><a href="rtcp-rest-api/README.md"><em>rtcp-rest-api</em></a>
 </h3>
 
-<p>This example takes advantage of the Stubs REST API that is part of the Rational Test Control Panel. It produces and a simple report in text form containing information about the stubs available and running within the Rational Test Control Panel.</p>
+<p>Examples that take advantage of the RTCP REST API that is part of the Rational Test Control Panel. </p>
 
-<pre><code>java -jar RTCPStubReporter.jar
+<h4>
+<a name="stub-reporter" class="anchor" href="#stub-reporter"><span class="octicon octicon-link"></span></a>stub reporter</h4>
+
+<p>This produces and a simple report in text form containing information about the stubs available and running within the Rational Test Control Panel.</p>
+
+<pre><code>java -jar stub-reporter.jar
     Usage: RTCPUrl [Domain name,Environment name];*
     e.g.: http://localhost:7819/RTCP Domain Name1,Env1;Domain2,Env2
 </code></pre>
