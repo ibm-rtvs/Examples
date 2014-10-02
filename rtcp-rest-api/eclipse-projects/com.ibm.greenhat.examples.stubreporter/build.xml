@@ -1,0 +1,32 @@
+<project name="com.ibm.greenhat.examples.stubreporter" default="package">
+	
+	<property name="javac.build.version" value="1.6" />
+	
+	<description>
+        Build the stub reporter jar file
+    </description>
+	<!-- set global properties for this build -->
+	<property name="src" location="${basedir}/src" />
+	<property name="build" location="${basedir}/build" />
+	<property name="dist" location="${basedir}" />
+
+	<target name="compile" description="compile the source">
+		<mkdir dir="${build}" />
+		<javac srcdir="${src}" destdir="${build}"
+			includes="**" encoding="utf-8"  source="${javac.build.version}" target="${javac.build.version}"
+			nowarn="true" debug="true" debuglevel="lines,vars,source" includeantruntime="false"/>
+	</target>
+
+	<target name="package" depends="compile" description="generate the distribution">
+		<mkdir dir="${dist}" />
+
+		<jar destfile="${dist}/stub-reporter.jar" basedir="${build}" includes="**" excludes="**/Test.class">
+			<manifest>
+				<attribute name="Main-Class" value="com.ibm.greenhat.examples.stubreporter.Main" />
+			</manifest>
+		</jar>
+		
+		<delete dir="${build}" />
+	</target>
+
+</project>
