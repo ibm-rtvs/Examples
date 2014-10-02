@@ -16,7 +16,8 @@ This project contains ready-to-use examples that showcase features of RTCP and R
 * [Download instructions](#download-instructions)
 * [Examples](#examples)
  * [echo](#echo)
-  * [calculator](#calculator)
+ * [calculator](#calculator)
+ * [rtcp-rest-api](#rtcp-rest-api)
 * [License](#license)
 
 
@@ -67,11 +68,13 @@ RTCP and includes:
     - A partial stub which lets most operations [pass-through](http://www-01.ibm.com/support/knowledgecenter/SSBLQQ_8.6.0/com.ibm.rational.rtvs.ref.doc/topics/c_rtvsref_sift_passthrough.html?lang=en "sift-and-pass-through") to the actual web service
       but intercepts a specific operation to return an unexpected value
 	  
-### [*RTCP stub reporter*](rtcp-stub-reporter/README.md)
+### [*rtcp-rest-api*](rtcp-rest-api/README.md)
 
-This example takes advantage of the Stubs REST API that is part of the Rational Test Control Panel. It produces and a simple report in text form containing information about the stubs available and running within the Rational Test Control Panel.
+Example takes advantage of the RTCP REST API that is part of the Rational Test Control Panel. 
 
-    java -jar RTCPStubReporter.jar
+*stub reporter* produces and a simple report in text form containing information about the stubs available and running within the Rational Test Control Panel.
+
+    java -jar stub-reporter.jar
         Usage: RTCPUrl [Domain name,Environment name];*
         e.g.: http://localhost:7819/RTCP Domain Name1,Env1;Domain2,Env2
 

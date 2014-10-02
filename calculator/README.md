@@ -33,7 +33,7 @@ After download of the Examples project, the folder structure for the calculator 
             rit-project-calculator.zip
         applications
             client
-                com.ibm.greenhat.examples.calculator.jar
+                calculator.jar
                 startCalculator.bat  
                 startCalculatorInTestMode.bat 
                 

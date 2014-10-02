@@ -1,9 +1,9 @@
 { "name": "rtvs | Examples",
   "version" : "0.1-alpha",
   "dependencies": {
-    "Rational Integration Tester": "6.0.1",
-    "Rational Integration Tester Platform Pack": "6.0.1",
-    "Rational Integration Tester Agent": "6.0.1",
-    "Rational Test Control Panel": "6.0.1"
+    "IBM Rational Integration Tester": "6.0.1",
+    "IBM Rational Integration Tester Platform Pack": "6.0.1",
+    "IBM Rational Integration Tester Agent": "6.0.1",
+    "IBM Rational Test Control Panel": "6.0.1"
   }
 }
