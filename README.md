@@ -62,15 +62,7 @@ RTCP and includes:
 	virtual calculators (stubs) provided in the RIT project. 
 
 - A RIT project which contains
-    - A data-driven test, fed by rows in a CSV file.
-    
-    Operation,Value1,Value2,Result
-    Add,1,1,2
-    Divide,12,4,3
-    Modulus,12,5,2
-    Multiply,3,4,12
-    Subtract,7,4,3
-    
+    - A data-driven test, fed by rows in a CSV file.   
     - A series of basic test calculator tests, one per calculator operation.
 	- A test suite which exercises basic calculator operations of the web service.
 	- A stub which simulates all of the operations of the calculator web service.
