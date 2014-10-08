@@ -13,6 +13,8 @@ Though the application itself remains unchanged, it can be launched in one of tw
 ![Calculator](calculator.png "The calculator app")	
 
 - A RIT project which contains
+    - A data-driven test, fed by rows in a CSV file.
+    - A series of basic test calculator tests, one per calculator operation.
 	- A test suite which exercises basic calculator operations of the web service.
 	- Monitor definitions for all of the calculator operations.
 	- A stub which simulates all of the operations of the calculator web service.
@@ -45,13 +47,29 @@ After download of the Examples project, the folder structure for the calculator 
 - change directory to Examples/Calculator/applications/client.
 - run startCalculator.bat.
 
-## Running the test suite
+## Running the basic test suite
 - Start RIT.
 - Select Open, then navigate to the calculator/calculator.ghp file. 
 - Go to "Test Lab" (F11).
 - Right click on Logical/calculator/Suites/BasicTests.
 - Select *Run*.
 - The BasicTests suite, which consists of 5 tests shows 100% complete.
+
+## Running the data-driven test, based on rows in a CSV file
+- Start RIT.
+- Select Open, then navigate to the calculator/calculator.ghp file. 
+- Go to "Test Lab" (F11).
+- Right click on Logical/calculator/Tests/TestOperations.
+- Select *Run*.
+- The TestOperations test, which iterates over the 5 data rows in the *calculations.csv* file shows 100% complete.
+- The data in the *calculations.csv* file is of the form
+
+    Operation,Value1,Value2,Result
+    Add,1,1,2
+    Divide,12,4,3
+    Modulus,12,5,2
+    Multiply,3,4,12
+    Subtract,7,4,3
 
 ## Recording the calculator application
 - Start RIT.
