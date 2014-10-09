@@ -103,7 +103,7 @@ RTCP and includes:</p>
 <p>A Java calculator application which uses the <em>calculator</em> web service to perform mathematical calculations. Though the application itself remains unchanged, it can be launched in one of two modes.</p>
 
 <ul>
-<li>Normal mode where it connects directly to the web service</li>
+<li>Normal mode where it connects directly to the web service.</li>
 <li>Test mode, where traffic is routed through through a RIT proxy. 
 This facilitates both tracing at the operational level and routing operations to the 
 virtual calculators (stubs) provided in the RIT project. </li>
@@ -113,9 +113,11 @@ virtual calculators (stubs) provided in the RIT project. </li>
 <p>A RIT project which contains</p>
 
 <ul>
+<li>A data-driven test, fed by rows in a CSV file.<br>
+</li>
+<li>A series of basic test calculator tests, one per calculator operation.</li>
 <li>A test suite which exercises basic calculator operations of the web service.</li>
-<li>Monitor definitions for all of the calculator operations</li>
-<li>A stub which simulates all of the operations of the calculator web service</li>
+<li>A stub which simulates all of the operations of the calculator web service.</li>
 <li>A partial stub which lets most operations <a href="http://www-01.ibm.com/support/knowledgecenter/SSBLQQ_8.6.0/com.ibm.rational.rtvs.ref.doc/topics/c_rtvsref_sift_passthrough.html?lang=en" title="sift-and-pass-through">pass-through</a> to the actual web service
 but intercepts a specific operation to return an unexpected value</li>
 </ul>
