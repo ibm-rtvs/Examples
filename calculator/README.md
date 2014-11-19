@@ -1,7 +1,7 @@
 
 # Example : calculator
 
-This example takes advantage of the **calculator** example web service that is integrated into
+This example uses the **calculator** example web service that is built into
 RTCP and includes:
  
 - A Java calculator application which uses the *calculator* web service to perform mathematical calculations.
@@ -161,7 +161,13 @@ Compare the two startup scripts, **startCalulator** and **startCalculatorInTestM
 You'll find the only real difference is the addition of two [java networking properties](http://docs.oracle.com/javase/7/docs/api/java/net/doc-files/net-properties.html) in
 the startup script.
 
-    -Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128
+    rem When running the app in a Java 7 environment the settings must be
+    set JAVA_TOOL_OPTIONS=-Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttp.nonProxyHosts= -Djava.net.useSystemProxies=true
+    rem When running the app in a Java 6 environment the settings must be
+    rem set JAVA_TOOL_OPTIONS=-Dhttp.proxyHost=localhost -Dhttp.proxyPort=3128 -Dhttp.nonProxyHosts=~localhost -Djava.net.useSystemProxies=true
+
+ The [JAVA\_TOOL\_OPTIONS](http://www.oracle.com/technetwork/java/javase/envvars-138887.html#gbmsy) are automatically picked up by Java
+
 
 During the default installation process for *Rational Integration Platform Pack* a default http proxy is installed and auto-started.
 This proxy's configuration is determined by the contents of RIT-Platform/httptcp/registration.xml.
@@ -171,6 +177,8 @@ This proxy's configuration is determined by the contents of RIT-Platform/httptcp
 	</http-proxy>	
 
 Port 3128 is the default port that is used to manage http traffic, in conjunction with the associated RTCP instance (default is http://localhost:7819/RTCP) 
+
+The logic check for which Java is being used is due to differences in how Java 6 and follow on versions interpret **http.nonProxyHosts**
 
 # Further reading
  - TechNote : [Message filtering and validation](http://www-01.ibm.com/support/docview.wss?uid=swg21669000).

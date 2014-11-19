@@ -1,13 +1,14 @@
-@rem ***************************************************************************
-@rem Start Calculator Application 
-@rem ***************************************************************************
+@echo off
+rem ***************************************************************************
+rem Start Calculator Application 
+rem ***************************************************************************
 
 pushd
 setlocal
 
 title Calculator Client
 
-@rem Location of downloaded Apache Axis2
+rem Location of downloaded Apache Axis2
 set AXIS2_HOME=./axis2-1.6.2
 
 

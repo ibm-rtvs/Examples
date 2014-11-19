@@ -1,7 +1,7 @@
 
 # Example : echo 
 
-This example takes advantage of the **echo** example web service that is integrated into
+This example uses the **echo** example web service that is built into
 RTCP and includes: 
 
 - A RIT project which contains a test to exercise the *echo* operation of the web service.
