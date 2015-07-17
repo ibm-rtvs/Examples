@@ -24,6 +24,17 @@ Gives the right _length_ number of characters of the _string_.
 
 ###Right###
 
-trimlength(string)
+__Syntax__: trimlength(string)
+__Description__:
 
 Remove spaces on left and right and returns the length of the trimmed _string_.
+
+__Example__:
+
+`
+tags["product"]="    IBM Rational Tester            ";
+tags["output"]=trimlength(tags["product"]);
+// gives output=19
+`
+
+
