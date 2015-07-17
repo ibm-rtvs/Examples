@@ -1,5 +1,12 @@
-#Custom Function#
+#Custom Functions#
 
+##COBOL##
+
+###COBOL_Integer###
+
+COBOL_Integer(string)
+
+Give a integer based on the _string_.
 
 ##String##
 

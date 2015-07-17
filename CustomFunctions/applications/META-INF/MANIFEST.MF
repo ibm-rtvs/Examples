@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CustomFunctions
+Bundle-SymbolicName: CustomFunctions;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: com.ibm.greenhat.examples.customfunctions
+Import-Package: com.ghc.ghTester.expressions

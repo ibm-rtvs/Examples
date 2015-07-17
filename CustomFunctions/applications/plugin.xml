@@ -4,6 +4,14 @@
    <extension
          point="com.ghc.ghTester.functions">
       <function
+            displayName="COBOL/COBOL_Integer"
+            functionClass="com.ibm.greenhat.examples.customfunctions.COBOL_Integer"
+            maxParameters="1"
+            minParameters="1"
+            name="COBOL_Integer"
+            syntax="COBOL_Integer( string ) ">
+      </function>
+      <function
             displayName="String/left"
             functionClass="com.ibm.greenhat.examples.customfunctions.Left"
             maxParameters="2"
