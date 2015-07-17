@@ -12,6 +12,14 @@
             syntax="COBOL_Integer( string ) ">
       </function>
       <function
+            displayName="COBOL/COBOL_parseNumber"
+            functionClass="com.ibm.greenhat.examples.customfunctions.COBOL_parseNumber"
+            maxParameters="1"
+            minParameters="1"
+            name="COBOL_parseNumber"
+            syntax="COBOL_parseNumber( string ) ">
+      </function>
+      <function
             displayName="String/left"
             functionClass="com.ibm.greenhat.examples.customfunctions.Left"
             maxParameters="2"

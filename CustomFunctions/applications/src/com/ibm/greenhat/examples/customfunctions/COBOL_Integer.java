@@ -1,4 +1,4 @@
-package nl.vanlint5.business.functions;
+package com.ibm.greenhat.examples.customfunctions;
 
 import java.util.Vector;
 
