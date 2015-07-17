@@ -13,6 +13,8 @@ this will take ownership and that site will reference this GIT project.
 
 Select one of the following chapters
 
+## [*Documentation*](doc/index.md) 
+
 ## [*RIT Demo Project*](RITDemoProject/README.md) 
 
 This is a 'download-unzip-and-go' project to demonstrate the functions of the various provided custom functions.
