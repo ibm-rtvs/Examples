@@ -31,10 +31,10 @@ Remove spaces on left and right and returns the length of the trimmed _string_.
 
 __Example__:
 
-`
+```
 tags["product"]="    IBM Rational Tester            ";
 tags["output"]=trimlength(tags["product"]);
 // gives output=19
-`
+```
 
 
