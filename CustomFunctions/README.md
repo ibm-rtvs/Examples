@@ -22,4 +22,4 @@ This is a 'download-unzip-and-go' project to demonstrate the functions of the va
 The actual source of the custom functions provided in the RIT Demo Project.
 
 ## License ##
-See [*License Information*](../README.md) 
+See [*License Information*](../README.md#license) 
