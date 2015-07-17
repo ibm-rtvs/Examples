@@ -15,13 +15,15 @@ Select one of the following chapters
 
 ## [*Documentation*](doc/index.md) 
 
-## [*RIT Demo Project*](RITDemoProject/README.md) 
+## [*RIT Demo Project*](RIT-projects/README.md) 
 
 This is a 'download-unzip-and-go' project to demonstrate the functions of the various provided custom functions.
 
-## [*RIT Development Project*](RITDevelopmentProject/README.md)
+## [*RIT Development Project*](applications/README.md)
 
 The actual source of the custom functions provided in the RIT Demo Project.
+
+DO NOT USE THIS YET!
 
 ## License ##
 See [*License Information*](../README.md#license) 
