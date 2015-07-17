@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.ghc.ghTester.functions">
+      <function
+            displayName="String/left"
+            functionClass="com.ibm.greenhat.examples.customfunctions.Left"
+            maxParameters="2"
+            minParameters="2"
+            name="left"
+            syntax="left( string , length ) ">
+      </function>
+      <function
+            displayName="String/right"
+            functionClass="com.ibm.greenhat.examples.customfunctions.Right"
+            maxParameters="2"
+            minParameters="2"
+            name="right"
+            syntax="right( string , length ) ">
+      </function>
+      <function
+            displayName="String/trimlength"
+            functionClass="com.ibm.greenhat.examples.customfunctions.Left"
+            maxParameters="1"
+            minParameters="1"
+            name="trimlength"
+            syntax="trimlength( string ) ">
+      </function>
+   </extension>
+
+</plugin>
