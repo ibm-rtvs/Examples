@@ -3,7 +3,7 @@
 The Custom Functions are grouped
 
 * [COBOL](#cobol)
-* [Date](#date and time)
+* [Date](#date-and-time)
 * [File](#file)
 * [MQ](#mq)
 * [String](#string)
@@ -109,6 +109,20 @@ tags["DateOutput"] = formatSDF(tags["DateNow"],tags["DateFormat"]);
 
 ##FILE##
 
+###CleanFileSeparator###
+
+__Syntax__: cleanFileSeparator( directoryAsSting ) 
+
+__Description__:
+Replaces the / and \ by the correct file separator of the platform.
+It will remove any double file separators.
+
+__Example__:
+```
+tags["file"]=cleanFileSeparator( "C:\\RIT-Projects\\\new//CustomFunctions\\" ) ) {
+// return C:\RIT-Projects\new\CustomFunctions\
+```
+
 ###DirectoryExists###
 
 __Syntax__: directoryExists( directoryAsSting ) 
@@ -142,7 +156,8 @@ tags["output"]=directoryList("C:\\RIT-Projects");
 __Syntax__: FileExists( fileAsString ) 
 
 __Description__:
-Returns a boolean true if the file exists.
+Returns a boolean true if the file exists. This can be used directly in the
+Decision Action.
 
 __Example__:
 ```

@@ -171,6 +171,14 @@
             name="getCentralProperty"
             syntax="getCentralProperty( property [,propertyfile] )">
       </function>
+      <function
+            displayName="File/cleanFileSeparator"
+            functionClass="com.ibm.greenhat.examples.customfunctions.CleanFileSeparator"
+            maxParameters="1"
+            minParameters="1"
+            name="cleanFileSeparator"
+            syntax="cleanFileSeparator( string ) ">
+      </function>
    </extension>
 
 </plugin>
