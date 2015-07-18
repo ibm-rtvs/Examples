@@ -5,59 +5,39 @@ Due to the adhering of standards, leveraging Java, a user can implement his own 
 
 This folder will have examples on various custom functions, furthermore it will also a separate project which showcases the power of these functions. That would 'bootstrap' new users.
 
-THIS IS VERY NEW AND UNDER HEAVY CONSTRUCTION. YOU CAN LITERALLY SEE THE GROWING OF THE PROJECT!
+**THIS IS VERY NEW AND UNDER HEAVY CONSTRUCTION. YOU CAN LITERALLY SEE THE GROWING OF THE PROJECT!**
 
-The project started when customer demanded a specifc custom function. This was first published at
-http://business.vanlint5.nl . All functions and features are now documented over there, but over time
-this will take ownership and that site will reference this GIT project.
+The project started when customer demanded a specific function. This was first published at
+http://business.vanlint5.nl . All functions and features are now documented over here.
 
 Select one of the following chapters
 
 
-## [*Download Library*](RIT-projects/plugins) 
+## [*Download and Install*](doc/installation.md) 
 
-Few clicks to get the library and use it in your RIT project.
+There are three options to get the library with the custom functions:
 
-## [*RIT Demo Project*](RIT-projects/README.md) 
+1. Download only the latest CustomFunctions.jar file.
+2. Download the RIT-Project.
+3. Download the RIT Coding Project.
 
-This is a 'download-unzip-and-go' project to demonstrate the functions of the various provided custom functions.
+All are documented [here](doc/installation.md) 
 
 ## [*Documentation*](doc/index.md) 
 
-Not yet complete.
 The related documentation on the functions.
-
-## [*RIT Development Project*](applications/README.md)
-
-Not yet complete.
-The actual source of the custom functions provided in the RIT Demo Project.
+A complete list of functions can be viewed [here](doc/index.md)
 
 ##TIPS##
 
-You can use the custom functions in the decision action or a field directly.
+* You can use the custom functions in the decision action or a field directly.
+:To be documented.
+* Use the *-consoleLog* argument for starting RIT.
 
 ## License ##
 
 This project is an example. It can be used on 'AS-IS' basis.
-The functions will change.
+The functions will change over time. Customer should download the code
+and adapt and maintain to their own standards.
 
-See [*License Information*](../README.md#license) 
-
-The following code will be included in every snipped of code (if possible).
-'''
-/**
- * Copyright 2014 IBM Corp.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- * http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-'''
+See [*License Information*](../README.md#license)

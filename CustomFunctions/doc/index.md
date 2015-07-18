@@ -1,8 +1,6 @@
 #Custom Functions#
 
-NOT YET READY
-
-A number of functions will appear in the library. They are grouped
+The Custom Functions are grouped
 
 * [COBOL](#cobol)
 * [Date](#date and time)
