@@ -1,62 +1,58 @@
+/**
+ * Copyright 2014 IBM Corp.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * @author Marc van Lint
+ */
 package com.ibm.greenhat.examples.customfunctions;
 
 import java.util.Vector;
 
 import com.ghc.ghTester.expressions.Function;
-/**
- * @author Marc van Lint
- * <BR>Legal Noticen and Source can be obtained from http://business.vanlint5.nl
- */
+
 public class DoubleSlash extends Function {
 	private Function m_fInput = null;
 
-	public DoubleSlash(){
+	public DoubleSlash() {
 	}
-	
+
 	protected DoubleSlash(Function f1) {
 		m_fInput = f1;
 	}
 
 	@SuppressWarnings("rawtypes")
-	// TODO : SuppressWarnings should be removed.
 	@Override
 	public Function create(int size, Vector params) {
 		return new DoubleSlash((Function) params.get(0));
 	}
-	/**
-	 * <P>On-line: <B>"Change the single / into //"</B>
-	 *
-	 * <span class="strong">Example:</span>
-	 * 
-	 * <PRE>doubleSlash("Dog/Barks");</PRE>
-	 * <P>will return Dog//Barks.
-	 * 
-	 * @param input  the input string, the string to be converted (type: String)
-	 * 
-	 * @return <code>output</code> - string (type String)
-	 * 
-	 * 
-	 */
-	
-	@Override	
+
+	@Override
 	public Object evaluate(Object data) {
-		MESSAGE.printASIS();
+		MESSAGE.printASIS("DoubleSlash");
 		String output = "";
-		//int length = 0;
 		String input = m_fInput.evaluateAsString(data);
-		input=input.trim();
-		for ( int i = 0; i < input.length(); ++i ) {
-			   char c = input.charAt( i );
-			   //System.out.println(" "+i +"="+ c);
-			   if (c=='/') {
-				   output=output+"//";
-			   } else {
-				   output=output+c;
-			   }
-				   
+		input = input.trim();
+		for (int i = 0; i < input.length(); ++i) {
+			char c = input.charAt(i);
+			if (c == '/') {
+				output = output + "//";
+			} else {
+				output = output + c;
+			}
+
 		}
 
-
-		return "\"" + output + "\"";		
+		return "\"" + output + "\"";
 	}
 }

@@ -1,3 +1,20 @@
+/**
+ * Copyright 2014 IBM Corp.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * @author Marc van Lint
+ */
 package com.ibm.greenhat.examples.customfunctions;
 
 import java.io.FileInputStream;
@@ -7,15 +24,11 @@ import java.util.Properties;
 import java.util.Vector;
 
 import com.ghc.ghTester.expressions.Function;
-/**
- * @author Marc van Lint
- * <BR>Legal Noticen and Source can be obtained from http://business.vanlint5.nl
- */
+
 public class GetCentralProperty extends Function {
 	private Function m_fInput1 = null;
 	private Function m_fInput2 = null;
 	private int NumberOfArguments;
-
 
 	public GetCentralProperty(){
 	}
@@ -24,6 +37,7 @@ public class GetCentralProperty extends Function {
 		m_fInput1 = f1;
 		NumberOfArguments = 1;
 	}
+	
 	protected GetCentralProperty(Function f1,Function f2) {
 		m_fInput1 = f1;
 		m_fInput2 = f2;
@@ -31,26 +45,11 @@ public class GetCentralProperty extends Function {
 	}
 
 	@SuppressWarnings("rawtypes")
-	// TODO : SuppressWarnings should be removed.
 	@Override
 	public Function create(int size, Vector params) {
 		if (size==1) return  new GetCentralProperty((Function) params.get(0));
 		return new GetCentralProperty((Function) params.get(0),(Function) params.get(1));
 	}
-	/**
-	 * <P>On-line: <B>"Trim both sides of string and give length"</B>
-	 *
-	 * <span class="strong">Example:</span>
-	 * 
-	 * <PRE>intLenghtOfTimmedString = trimlength(" Dog barks            ");</PRE>
-	 * <P>will return 9.
-	 * 
-	 * @param input  the input string, the string to be trimmed and measured (type: String)
-	 * 
-	 * @return <code>length</code> - the length of the trimmed string (type int)
-	 * 
-	 * 
-	 */
 	
 	@Override	
 	public Object evaluate(Object data) {

@@ -1,55 +1,50 @@
+/**
+ * Copyright 2014 IBM Corp.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * @author Marc van Lint
+ */
 package com.ibm.greenhat.examples.customfunctions;
 
 import java.io.File;
 import java.util.Vector;
 
 import com.ghc.ghTester.expressions.Function;
-/**
- * @author Marc van Lint
- * <BR>Legal Noticen and Source can be obtained from http://business.vanlint5.nl
- */
 	public class DirectoryExists extends Function  {
 
 		private Function m_fFile = null;
 
-
 		public DirectoryExists(){
 		}
+		
 		protected DirectoryExists(Function f1) {
 			m_fFile = f1;
 		}
 
 		@SuppressWarnings("rawtypes")
-		// TODO : SuppressWarnings should be removed.
 		@Override
 		public Function create(int size, Vector params) {
 					return new DirectoryExists((Function) params.get(0));
 		}
 		
-		/**
-		 * <P>On-line: <B>"Checks if a directory exists."</B>
-		 * <P>Good to know:
-		 * 
-		 * <span class="strong">Example:</span>
-		 * 
-		 * <PRE>
-		 * diristhere=directoryExists("C:\tmp");
-		 * </PRE>
-		 * <P>will return boolean true
-		 * 
-		 * @param dirstr  the directory (type: String)
-		 * 
-		 * @return <code>value</code> - existence (type Boolean)
-		 * 
-		 * 
-		 */
 		@Override	
-		public Boolean evaluate(Object data) {
+		public Object evaluate(Object data) {
+			MESSAGE.printASIS("DirectoryExists");
 			Boolean output = true;
-			MESSAGE.printASIS();
-			System.out.println("directoryExists");
+
 			String filePathString = m_fFile.evaluateAsString(data);
-			System.out.println("Check: "+filePathString);
+			MESSAGE.log("Check: "+filePathString);
 
 			File f = new File(filePathString);
 			if(f.exists() && f.isDirectory()) {
@@ -57,7 +52,7 @@ import com.ghc.ghTester.expressions.Function;
 			} else {
 				output = false;
 			}
-			System.out.println("Result: "+ output);
+			MESSAGE.log("Returns: "+ output);
 			return output;		
 		}
 	}

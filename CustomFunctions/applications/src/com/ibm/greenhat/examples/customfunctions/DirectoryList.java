@@ -1,3 +1,20 @@
+/**
+ * Copyright 2014 IBM Corp.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * @author Marc van Lint
+ */
 package com.ibm.greenhat.examples.customfunctions;
 
 import java.io.File;
@@ -5,10 +22,7 @@ import java.util.ArrayList;
 import java.util.Vector;
 
 import com.ghc.ghTester.expressions.Function;
-/**
- * @author Marc van Lint
- * <BR>Legal Noticen and Source can be obtained from http://business.vanlint5.nl
- */
+
 	public class DirectoryList extends Function  {
 
 		private Function m_fFile = null;
@@ -21,7 +35,7 @@ import com.ghc.ghTester.expressions.Function;
 		}
 
 		@SuppressWarnings("rawtypes")
-		// TODO : SuppressWarnings should be removed.
+		
 		@Override
 		public Function create(int size, Vector params) {
 					return new DirectoryList((Function) params.get(0));
@@ -48,8 +62,7 @@ import com.ghc.ghTester.expressions.Function;
 		@Override	
 		public ArrayList<String> evaluate(Object data) {
 			ArrayList<String> output = new ArrayList<String>();
-			MESSAGE.printASIS();
-			System.out.println("directoryList");
+			MESSAGE.printASIS("DirectoryList");
 			String filePathString = m_fFile.evaluateAsString(data);
 
 			
@@ -58,10 +71,10 @@ import com.ghc.ghTester.expressions.Function;
 
 			    for (int i = 0; i < listOfFiles.length; i++) {
 			      if (listOfFiles[i].isFile()) {
-			        System.out.println("File " + listOfFiles[i].getName());
+			        MESSAGE.log("File " + listOfFiles[i].getName());
 					output.add(listOfFiles[i].getName());
 			      } else if (listOfFiles[i].isDirectory()) {
-			        System.out.println("Directory " + listOfFiles[i].getName());
+			        // MESSAGE.log("Directory " + listOfFiles[i].getName());
 			      }
 			    }
 			return output;		
