@@ -39,9 +39,9 @@
             displayName="System/log"
             functionClass="com.ibm.greenhat.examples.customfunctions.Log"
             maxParameters="2"
-            minParameters="2"
+            minParameters="1"
             name="log"
-            syntax="log( stringfile , stringmessage )">
+            syntax="log( stringmessage [, stringfile ] )">
       </function>
       <function
             displayName="MQ/MsgID"
@@ -141,7 +141,7 @@
       </function>
       <function
             displayName="String/trimlength"
-            functionClass="com.ibm.greenhat.examples.customfunctions.Left"
+            functionClass="com.ibm.greenhat.examples.customfunctions.TrimLength"
             maxParameters="1"
             minParameters="1"
             name="trimlength"

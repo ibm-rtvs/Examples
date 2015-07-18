@@ -24,8 +24,8 @@ Give a integer based on the _string_.
 
 __Example__:
 ```
-tags["Number"]=99
-tags["output"]= COBOL_Integer(tags["Number"],5);
+tags["input"]=99
+tags["output"]= COBOL_Integer(tags["input"],5);
 // gives output="00099"
 ```
 Make note that leading 0 can be added by a format definition on a field. But this gives a quick option to generate a number to compare with the field read. Alternatively you could use COBOL_parseNumber.
@@ -41,28 +41,30 @@ Get the number from a string (integer and floating, separator can be a , or a . 
 __Example__:
 ```
 tags["output"]=COBOL_parseNumber("+0000012345");
-// gives output="????"
+// gives output="12345"
 tags["output"]=COBOL_parseNumber("-0000012345");
-// gives output="????"
+// gives output="-12345"
 tags["output"]=COBOL_parseNumber("0000012345-");
-// gives output="????"
-tags["output"]=COBOL_parseNumber("000001.2345-");
-// gives output="????"
+// gives output="-12345"
+tags["output"]=COBOL_parseNumber("00000123.45-");
+// gives output="-123.45"
 tags["output"]=COBOL_parseNumber("00000123,45-");
-// gives output="????"
+// gives output="-123.45"
 ```
 
 ###COBOL_SignLeadingSeparate###
 
-__Syntax__: COBOL_SignLeadingSeparate(value,length) 
+__Syntax__: COBOL_SignLeadingSeparate(integerString,length) 
 
 __Description__:
-Return the value back with leading zero's and sign on the left.
+Return the integer value back with leading zero's and sign on the left.
 
 __Example__:
 ```
-tags["output"]=COBOL_SignLeadingSeparate("123.45-",10);
-// gives output="????"
+tags["output"]=COBOL_SignLeadingSeparate("12345",10);
+// gives output="+0000012345"
+tags["output"]=COBOL_SignLeadingSeparate("-12345",10);
+// gives output="-0000012345"
 ```
 
 ###COBOL_SignTrailingSeparate###
@@ -74,8 +76,10 @@ Return the value back with leading zero's and sign on the right.
 
 __Example__:
 ```
-tags["output"]=COBOL_SignLeadingSeparate("123.45-",10);
-// gives output="????"
+tags["output"]=COBOL_SignLeadingSeparate("12345",10);
+// gives output="0000012345+"
+tags["output"]=COBOL_SignLeadingSeparate("-12345",10);
+// gives output="0000012345-"
 ```
 
 
@@ -116,7 +120,7 @@ Checks if a directory exists and returns a boolean value.
 
 __Example__:
 ```
-if ( directoryExists( "C:\RIT-Projects\" ) ) {
+if ( directoryExists( "C:\\RIT-Projects" ) ) {
   // Do something
 }
 // return true
@@ -131,7 +135,7 @@ List all files in a directory. The list will not contain subdirectories, only fi
 
 __Example__:
 ```
-tags["output"]=directoryList("C:\RIT-Projects\");
+tags["output"]=directoryList("C:\\RIT-Projects");
 // output contains a list of files.
 ```
 
@@ -140,14 +144,14 @@ tags["output"]=directoryList("C:\RIT-Projects\");
 __Syntax__: FileExists( fileAsString ) 
 
 __Description__:
-Some description
+Returns a boolean true if the file exists.
 
 __Example__:
 ```
-if ( fileExists( "C:\RIT-Projects\config.properties" ) ) {
+if ( fileExists( "C:\\RIT-Projects\\config.properties" ) ) {
   // Do something
 }
-// return true
+// returns true
 ```
 
 ###FileSize###
@@ -275,11 +279,12 @@ tags["output"]=trimlength(tags["product"]);
 __Syntax__: GetCentralPropert( property [,propertyfile] ) 
 
 __Description__:
-Get a property from the property file.
+Get a property from the property file. The property must be in lower case!
+If property file is not provided, the file C:\config.properties used.
 
 __Example__:
 ```
-tag["QueueToUse"]=GetCentralProperty("MQ.myDomain.myEnvironment.Application1.Application2");
+tag["QueueToUse"]=GetCentralProperty("mq.mydomain.myenvironment.application1.application2");
 // Gives the applicable queue for that domain/environment combination.
 ```
 
@@ -297,15 +302,19 @@ info();
 
 ###Log###
 
-__Syntax__: log( argument ) 
+__Syntax__: log( message [, logfile] ) 
 
 __Description__:
-Write the message string to the consoleLog(?) and the logFile.
+Write the message string to the consoleLog. If a logfile is specified it's appended to that file.
 
 __Example__:
 ```
-code here
+log("Transaction started");
+log("Stub started now","C:/logs/mylog.log");
 ```
+The Log Action shows the message in the RIT GUI Console.
+
+Make note that the Log Action can be set to Warning and Error. Error will fail the test.
 
 ###PrintBinConsole###
 
@@ -324,7 +333,7 @@ printBinConsole("IBM Rational Integration Tester")
 __Syntax__: printConsole( input ) 
 
 __Description__:
-Some description
+Equal to log without specification of log-file.
 
 __Example__:
 ```

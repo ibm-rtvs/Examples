@@ -59,7 +59,10 @@ public class Log extends Function {
 		// Print out to console
 		String input = m_fInput.evaluateAsString(data);
 		input = input.trim();
+		// Output to Console
 		MESSAGE.log(input);
+		// Output to RIT GUI
+		
 
 		// If file is given, add to file.
 		if (NumberOfArguments == 2) {

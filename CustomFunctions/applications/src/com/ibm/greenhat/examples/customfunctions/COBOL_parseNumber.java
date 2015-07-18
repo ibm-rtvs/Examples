@@ -51,7 +51,7 @@ public class COBOL_parseNumber extends Function {
 		// Assume sign can be left side or right side or no sign....
 		if (datastring.charAt(0) == '+'
 				|| datastring.charAt(datastring.length() - 1) == '+') {
-			datastring = datastring.replaceAll("+", "");
+			datastring = datastring.replaceAll("\\+", "");
 			negative = false;
 		}
 		if (datastring.charAt(0) == '-'
@@ -66,7 +66,7 @@ public class COBOL_parseNumber extends Function {
 		}
 
 		// Just replace any , notation with a .
-		datastring = datastring.replaceAll(",", "\\.");
+		datastring = datastring.replace(",", ".");
 		if (datastring.indexOf('.') != -1) {
 			NumberFormat format = NumberFormat.getInstance(Locale.US);
 			Number number = null;

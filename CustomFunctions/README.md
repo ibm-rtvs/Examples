@@ -32,6 +32,10 @@ The related documentation on the functions.
 Not yet complete.
 The actual source of the custom functions provided in the RIT Demo Project.
 
+##TIPS##
+
+You can use the custom functions in the decision action or a field directly.
+
 ## License ##
 
 This project is an example. It can be used on 'AS-IS' basis.
