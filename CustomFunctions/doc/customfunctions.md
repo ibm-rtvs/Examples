@@ -7,12 +7,12 @@ Documentation on the standard provided functions can be fount at:
 [IBM Documentation](http://business.vanlint5.nl/html2/doc.html?com.ibm.rational.rit.ref.doc/topics/c_ritref_functions.html)
 For more on Actions see [Actions](actions.md)
 
-* [COBOL](#cobol)
-* [Date](#date-and-time)
-* [File](#file)
-* [MQ](#mq)
-* [String](#string)
-* [System](#system)
+* [COBOL](customfunctions.md#cobol)
+* [Date](customfunctions.md#date-and-time)
+* [File](customfunctions.md#file)
+* [MQ](customfunctions.md#mq)
+* [String](customfunctions.md#string)
+* [System](customfunctions.md#system)
 
 ##Assertion##
 Standard RIT.
