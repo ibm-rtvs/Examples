@@ -10,7 +10,7 @@ You have 3 options to get the code of the Custom Functions.
 ##Download the CustomFunctions.jar###
 Few clicks to get the library and use it in your RIT project.
 
-1. Select the [Code Library](RIT-projects/plugins) .
+1. Select the [Code Library](../RIT-projects/plugins) .
 2. Select the latest jar file.
 3. Select *View Raw* - this should download the jar file.
 4. Copy the jar file in the %%PROJECT/ROOT_DIRECTORY%%/Functions
@@ -19,7 +19,7 @@ Few clicks to get the library and use it in your RIT project.
 
 ##RIT Project
 
-1. Select the [RIT Project](RIT-projects) .
+1. Select the [RIT Project](../RIT-projects) .
 2. Select the CustomFunctions.zip project
 3. Select the *View Raw* - this should download the project.
 4. Copy the project file in a directory (e.g. C:\RIT-Projects ).
