@@ -40,7 +40,7 @@ public class CleanFileSeparator extends Function {
 	@Override
 	public Object evaluate(Object data) {
 		MESSAGE.printASIS("CleanFileSeparator");
-
+		MESSAGE.log("file.separator: " +System.getProperty("file.separator"));
 		String output = "";
 		String input = m_fInput.evaluateAsString(data);
 		input = input.trim();
@@ -53,11 +53,10 @@ public class CleanFileSeparator extends Function {
 	}
 
 	static String cleanFileSeparator(String input) {
-		String output;
+		input = replaceFileSeparator(input, System.getProperty("file.separator"));
 		input = clean(input, '\\');
 		input = clean(input, '/');
-		output = replaceFileSeparator(input, System.getProperty("file.separator"));
-		return output;
+		return input;
 	}
 
 	static String replaceFileSeparator(String input, String fstring) {

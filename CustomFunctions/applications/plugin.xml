@@ -4,6 +4,14 @@
    <extension
          point="com.ghc.ghTester.functions">
       <function
+            displayName="File/cleanFileSeparator"
+            functionClass="com.ibm.greenhat.examples.customfunctions.CleanFileSeparator"
+            maxParameters="1"
+            minParameters="1"
+            name="cleanFileSeparator"
+            syntax="cleanFileSeparator( string ) ">
+      </function>
+      <function
             displayName="COBOL/COBOL_Integer"
             functionClass="com.ibm.greenhat.examples.customfunctions.COBOL_Integer"
             maxParameters="2"
@@ -36,52 +44,20 @@
             syntax="COBOL_SignTrailingSeparate( integerToProcess [, intNrPos ] )">
       </function>
       <function
-            displayName="System/log"
-            functionClass="com.ibm.greenhat.examples.customfunctions.Log"
-            maxParameters="2"
-            minParameters="1"
-            name="log"
-            syntax="log( stringmessage [, stringfile ] )">
-      </function>
-      <function
-            displayName="MQ/MsgID"
-            functionClass="com.ibm.greenhat.examples.customfunctions.MsgID"
-            maxParameters="1"
-            minParameters="0"
-            name="MsgID"
-            syntax="MsgID( [ length ] )">
-      </function>
-      <function
-            displayName="System/printBinConsole"
-            functionClass="com.ibm.greenhat.examples.customfunctions.PrintBinConsole"
-            maxParameters="1"
-            minParameters="1"
-            name="printBinConsole"
-            syntax="printBinConsole( stringmsg )">
-      </function>
-      <function
-            displayName="System/printConsole"
-            functionClass="com.ibm.greenhat.examples.customfunctions.PrintConsole"
-            maxParameters="1"
-            minParameters="1"
-            name="printConsole"
-            syntax="printConsole( stringmsg )">
-      </function>
-      <function
-            displayName="String/right"
-            functionClass="com.ibm.greenhat.examples.customfunctions.Right"
-            maxParameters="2"
-            minParameters="2"
-            name="right"
-            syntax="right( string , length ) ">
-      </function>
-      <function
             displayName="File/directoryExists"
             functionClass="com.ibm.greenhat.examples.customfunctions.DirectoryExists"
             maxParameters="1"
             minParameters="1"
             name="directoryExists"
             syntax="directoryExists( fullPathDirectoryName )">
+      </function>
+      <function
+            displayName="String/doubleSlash"
+            functionClass="com.ibm.greenhat.examples.customfunctions.DoubleSlash"
+            maxParameters="1"
+            minParameters="1"
+            name="doubleSlash"
+            syntax="doubleSlash(string)">
       </function>
       <function
             displayName="File/directoryList"
@@ -116,12 +92,68 @@
             syntax="formatSDF(mseconds,simpleDataFormat)">
       </function>
       <function
+            displayName="System/getCentralProperty"
+            functionClass="com.ibm.greenhat.examples.customfunctions.GetCentralProperty"
+            maxParameters="2"
+            minParameters="1"
+            name="getCentralProperty"
+            syntax="getCentralProperty( property [,propertyfile] )">
+      </function>
+      <function
+            displayName="System/info"
+            functionClass="com.ibm.greenhat.examples.customfunctions.Info"
+            maxParameters="0"
+            minParameters="0"
+            name="info"
+            syntax="info()">
+      </function>
+      <function
+            displayName="System/log"
+            functionClass="com.ibm.greenhat.examples.customfunctions.Log"
+            maxParameters="2"
+            minParameters="1"
+            name="log"
+            syntax="log( stringmessage [, stringfile ] )">
+      </function>
+      <function
             displayName="String/left"
             functionClass="com.ibm.greenhat.examples.customfunctions.Left"
             maxParameters="2"
             minParameters="2"
             name="left"
             syntax="left( string , length ) ">
+      </function>
+      <function
+            displayName="MQ/MsgID"
+            functionClass="com.ibm.greenhat.examples.customfunctions.MsgID"
+            maxParameters="1"
+            minParameters="0"
+            name="MsgID"
+            syntax="MsgID( [ length ] )">
+      </function>
+      <function
+            displayName="System/printBinConsole"
+            functionClass="com.ibm.greenhat.examples.customfunctions.PrintBinConsole"
+            maxParameters="1"
+            minParameters="1"
+            name="printBinConsole"
+            syntax="printBinConsole( stringmsg )">
+      </function>
+      <function
+            displayName="System/printConsole"
+            functionClass="com.ibm.greenhat.examples.customfunctions.PrintConsole"
+            maxParameters="1"
+            minParameters="1"
+            name="printConsole"
+            syntax="printConsole( stringmsg )">
+      </function>
+      <function
+            displayName="String/right"
+            functionClass="com.ibm.greenhat.examples.customfunctions.Right"
+            maxParameters="2"
+            minParameters="2"
+            name="right"
+            syntax="right( string , length ) ">
       </function>
       <function
             displayName="String/singleSlash"
@@ -146,38 +178,6 @@
             minParameters="1"
             name="trimlength"
             syntax="trimlength( string ) ">
-      </function>
-      <function
-            displayName="String/doubleSlash"
-            functionClass="com.ibm.greenhat.examples.customfunctions.DoubleSlash"
-            maxParameters="1"
-            minParameters="1"
-            name="doubleSlash"
-            syntax="doubleSlash(string)">
-      </function>
-      <function
-            displayName="System/info"
-            functionClass="com.ibm.greenhat.examples.customfunctions.Info"
-            maxParameters="0"
-            minParameters="0"
-            name="info"
-            syntax="info()">
-      </function>
-      <function
-            displayName="System/getCentralProperty"
-            functionClass="com.ibm.greenhat.examples.customfunctions.GetCentralProperty"
-            maxParameters="2"
-            minParameters="1"
-            name="getCentralProperty"
-            syntax="getCentralProperty( property [,propertyfile] )">
-      </function>
-      <function
-            displayName="File/cleanFileSeparator"
-            functionClass="com.ibm.greenhat.examples.customfunctions.CleanFileSeparator"
-            maxParameters="1"
-            minParameters="1"
-            name="cleanFileSeparator"
-            syntax="cleanFileSeparator( string ) ">
       </function>
    </extension>
 

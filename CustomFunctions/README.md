@@ -23,16 +23,17 @@ There are three options to get the library with the custom functions:
 
 All are documented [here](doc/installation.md) 
 
-## [*Documentation*](doc/index.md) 
+## [*Documentation*](doc/customfunctions.md) 
 
 The related documentation on the functions.
-A complete list of functions can be viewed [here](doc/index.md)
+A complete list of functions can be viewed [here](doc/customfunctions.md)
 
 ##TIPS##
 
 * You can use the custom functions in the decision action or a field directly.
 :To be documented.
 * Use the *-consoleLog* argument for starting RIT.
+* Check also http://www-01.ibm.com/support/docview.wss?uid=swg21597695
 
 ## License ##
 
