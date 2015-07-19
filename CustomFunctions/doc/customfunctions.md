@@ -25,6 +25,14 @@ Standard RIT.
 
 More on RIT and COBOL can be found on http://business.vanlint5.nl/html2/rit-cobol.html
 
+| Function | Description |
+| ---  | --- |
+| [COBOL_Integer](customfunctions.md#COBOL_Integer) | Generate a COBOL Integer |
+| [COBOL_parseNumber](customfunctions.md#COBOL_parseNumber) | Parse a COBOL formatted string to a number |
+| [COBOL_SignLeadingSeparate](customfunctions.md#COBOL_SignLeadingSeparate) | Generate a COBOL Sign Leading Value |
+| [COBOL_SignTrailingSeparate](customfunctions.md#COBOL_SignTrailingSeparate) | Generate a COBOL Sign Trailing Value |
+
+
 ###COBOL_Integer###
 
 __Syntax__: COBOL_Integer(string)
@@ -100,6 +108,10 @@ Standard RIT
 
 ##DATE and TIME##
 
+| Function | Description |
+| ---  | --- |
+| [FormatSDF](customfunctions.md#FormatSDF) | Generate a Simple Date Format based on ms |
+
 ###FormatSDF###
 
 __Syntax__: formatSDF( value ) 
@@ -123,6 +135,16 @@ tags["DateOutput"] = formatSDF(tags["DateNow"],tags["DateFormat"]);
 
 
 ##FILE##
+
+| Function | Description |
+| ---  | --- |
+| [CleanFileSeparator](customfunctions.md#CleanFileSeparator) | Replace a nicely formatted full path |
+| [DirectoryExists](customfunctions.md#DirectoryExists) | Check if a directory exists |
+| [DirectoryList](customfunctions.md#DirectoryList) | List files in a directory |
+| [FileExists](customfunctions.md#FileExists) | Check if a file exists |
+| [FileSize](customfunctions.md#FileSize) | Return size of file |
+
+FileExists
 
 ###CleanFileSeparator###
 
@@ -200,9 +222,13 @@ fileSize( "C:\RIT-Projects\config.properties" )
 
 There are some specific functions to support working with MQ.
 
+| Function | Description |
+| ---  | --- |
+| [MsgID](customfunctions.md#MsgID) | Generates an ID-string |
+
 ###MsgID###
 
-__Syntax__: msgID( [ length ] ) 
+__Syntax__: MsgID( [ length ] ) 
 
 __Description__:
 A generation of a MsgID string consisting of the date, time and a number of random numbers.
@@ -225,6 +251,15 @@ tags["output"]=MsgID(24)
 
 
 ##String##
+
+| Function | Description |
+| ---  | --- |
+| [DoubleSlash](customfunctions.md#DoubleSlash) | Generate a double slash string |
+| [Left](customfunctions.md#Left) | Left most X characters of a string |
+| [Right](customfunctions.md#Right) | Right most X characters of a string |
+| [SingleSlash](customfunctions.md#SingleSlash) | Remove double shashes |
+| [Trimlength](customfunctions.md#Trimlength) | Give length of string without the leading and following spaces |
+
 
 ###DoubleSlash###
 
@@ -276,7 +311,7 @@ tags["output"]=right(tags["product"],6);
 __Syntax__: singleSlash( input ) 
 
 __Description__:
-Some description
+Remove any double slashes. Consider using CleanFileSeparate.
 
 __Example__:
 ```javascript
@@ -301,6 +336,16 @@ tags["output"]=trimlength(tags["product"]);
 
 
 ##System##
+
+| Function | Description |
+| ---  | --- |
+| [GetCentralProperty](customfunctions.md#GetCentralProperty) | Get central property |
+| [Info](customfunctions.md#Info) | Show system information |
+| [Log](customfunctions.md#Log) | Log message |
+| [PrintBinConsole](customfunctions.md#PrintBinConsole) | Output in HEX format to console |
+| [PrintConsole](customfunctions.md#PrintConsole) | Output message to console |
+| [Sleep](customfunctions.md#Sleep) | Inline sleep function |
+
 
 ###GetCentralProperty###
 
@@ -359,6 +404,9 @@ __Example__:
 printBinConsole("IBM Rational Integration Tester")
 ```
 
+![alt text](http://business.vanlint5.nl/html2/images/rit-function-printBin.png "PrintBinConsole")
+
+
 ###PrintConsole###
 
 __Syntax__: printConsole( input ) 
@@ -370,6 +418,8 @@ __Example__:
 ```javascript
 printConsole("IBM Rational Integration Tester")
 ```
+
+
 
 ###Sleep###
 
