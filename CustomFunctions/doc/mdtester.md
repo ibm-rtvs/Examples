@@ -26,7 +26,7 @@ Sample WI
 
 > This is an block quote. Maybe we have to use these instead of other options.
 
-<FONT COLOR="red">this is red</FONT>
+<FONT COLOR="red">this is red</FONT> - Does not work in GitHub.
 
 
 

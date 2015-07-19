@@ -7,17 +7,15 @@ Documentation on the standard provided functions can be fount at:
 [IBM Documentation](http://business.vanlint5.nl/html2/doc.html?com.ibm.rational.rit.ref.doc/topics/c_ritref_functions.html)
 For more on Actions see [Actions](actions.md)
 
-| Group        | Description           |
-| ------------- |----------------------|
+| Group | Description |
+| ---  | --- |
 | [COBOL](customfunctions.md#cobol) | Several specific COBOL Copybook related functions |
 | [Date](customfunctions.md#date-and-time) | 1 Additional new Date function |
+| [File](customfunctions.md#file) | Powerful file functions |
+| [MQ](customfunctions.md#mq) | 1 Specific for MQ |
+| [String](customfunctions.md#string) | Powerful string processing functions |
+| [System](customfunctions.md#system) | Function to be use in script-code |
 
-* [COBOL](customfunctions.md#cobol)
-* [Date](customfunctions.md#date-and-time)
-* [File](customfunctions.md#file)
-* [MQ](customfunctions.md#mq)
-* [String](customfunctions.md#string)
-* [System](customfunctions.md#system)
 
 ##Assertion##
 Standard RIT.
@@ -210,11 +208,11 @@ __Description__:
 A generation of a MsgID string consisting of the date, time and a number of random numbers.
 If no length is given, length of 20 is assumed. Example data, sample SimpleDateFormat and length:
 
-'''
+<PRE>
 DATA             20141106193417383080
 SimpleDateFormat yyyyMMddHHmmssSSSRRR
 Length           12345678901234567890
-'''
+</PRE>
 
 __Example__:
 ```javascript
@@ -316,6 +314,8 @@ __Example__:
 ```javascript
 tag["QueueToUse"]=GetCentralProperty("mq.mydomain.myenvironment.application1.application2");
 // Gives the applicable queue for that domain/environment combination.
+tag["QueueToUse"]=GetCentralProperty("mq.mydomain.myenvironment.application1.application2","C:\\RIT-Projects\\CustomFunctions");
+// Gives the applicable queue for that domain/environment combination.
 ```
 
 ###Info###
@@ -323,7 +323,7 @@ tag["QueueToUse"]=GetCentralProperty("mq.mydomain.myenvironment.application1.app
 __Syntax__: info() 
 
 __Description__:
-Some information shown in the consoleLog
+Give system information in the consoleLog.
 
 __Example__:
 ```javascript
@@ -340,7 +340,8 @@ Write the message string to the consoleLog. If a logfile is specified it's appen
 __Example__:
 ```javascript
 log("Transaction started");
-log("Stub started now","C:/logs/mylog.log");
+logFile=cleanFileSeparator( tags["PROJECT/ROOT_DIRECTORY"]+"\\log\\+tags["TEST/NAME"]+".log");
+log("Stub started now",tags["logFile"]);
 ```
 The Log Action shows the message in the RIT GUI Console.
 
