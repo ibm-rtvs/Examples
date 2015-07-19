@@ -7,6 +7,11 @@ Documentation on the standard provided functions can be fount at:
 [IBM Documentation](http://business.vanlint5.nl/html2/doc.html?com.ibm.rational.rit.ref.doc/topics/c_ritref_functions.html)
 For more on Actions see [Actions](actions.md)
 
+| Group        | Description           |
+| ------------- |----------------------|
+| [COBOL](customfunctions.md#cobol) | Several specific COBOL Copybook related functions |
+| [Date](customfunctions.md#date-and-time) | 1 Additional new Date function |
+
 * [COBOL](customfunctions.md#cobol)
 * [Date](customfunctions.md#date-and-time)
 * [File](customfunctions.md#file)
@@ -46,7 +51,7 @@ Give a sting based on the _string_.
 Get the number from a string (integer and floating, separator can be a , or a . ).
 
 __Example__:
-```
+```javascript
 tags["output"]=COBOL_parseNumber("+0000012345");
 // gives output="12345"
 tags["output"]=COBOL_parseNumber("-0000012345");
@@ -67,7 +72,7 @@ __Description__:
 Return the integer value back with leading zero's and sign on the left.
 
 __Example__:
-```
+```javascript
 tags["output"]=COBOL_SignLeadingSeparate("12345",10);
 // gives output="+0000012345"
 tags["output"]=COBOL_SignLeadingSeparate("-12345",10);
@@ -82,7 +87,7 @@ __Description__:
 Return the value back with leading zero's and sign on the right.
 
 __Example__:
-```
+```javascript
 tags["output"]=COBOL_SignLeadingSeparate("12345",10);
 // gives output="0000012345+"
 tags["output"]=COBOL_SignLeadingSeparate("-12345",10);
@@ -107,7 +112,7 @@ Conversion of milliseconds to SimpleDateFormat
 Convesion of the time (in milliseconds as a string) to any SimpleDateFormat. See http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
 
 __Example__:
-```
+```javascript
 var k = new Date();
 // Create a string of the long integer.
 tags["DateNow"] = ""+k.valueOf() ;
@@ -130,7 +135,7 @@ Replaces the / and \ by the correct file separator of the platform.
 It will remove any double file separators.
 
 __Example__:
-```
+```javascript
 tags["file"]=cleanFileSeparator( "C:\\RIT-Projects\\\new//CustomFunctions\\" ) )
 // return C:\RIT-Projects\new\CustomFunctions\
 ```
@@ -158,7 +163,7 @@ __Description__:
 List all files in a directory. The list will not contain subdirectories, only files.
 
 __Example__:
-```
+```javascript
 tags["output"]=directoryList("C:\\RIT-Projects");
 // output contains a list of files.
 ```
@@ -172,7 +177,7 @@ Returns a boolean true if the file exists. This can be used directly in the
 Decision Action.
 
 __Example__:
-```
+```javascript
 if ( fileExists( "C:\\RIT-Projects\\config.properties" ) ) {
   // Do something
 }
@@ -187,7 +192,7 @@ __Description__:
 Returns the file size in bytes (Long value).
 
 __Example__:
-```
+```javascript
 fileSize( "C:\RIT-Projects\config.properties" )
 // return file size as a Long object.
 
@@ -212,7 +217,7 @@ Length           12345678901234567890
 '''
 
 __Example__:
-```
+```javascript
 tags["output"]=MsgID()
 // Returns "201411061934173830" (default length = 20)
 tags["output"]=MsgID(24)
@@ -231,7 +236,7 @@ __Description__:
 Replace the slashes by double slashes.
 
 __Example__:
-```
+```javascript
 tags["output"]=DoubleSlash("C:/RIT-Projects/Customer1/Project10",10);
 // gives output="????"
 ```
@@ -245,7 +250,7 @@ __Description__:
 Gives the left _length_ number of characters of the _string_.
 
 __Example__:
-```
+```javascript
 tags["product"]="IBM Rational Tester";
 tags["output"]=left(tags["product"],3);
 // gives output="IBM"
@@ -260,7 +265,7 @@ __Description__:
 Gives the right _length_ number of characters of the _string_.
 
 __Example__:
-```
+```javascript
 tags["product"]="IBM Rational Tester";
 tags["output"]=right(tags["product"],6);
 // gives output="Tester"
@@ -276,7 +281,7 @@ __Description__:
 Some description
 
 __Example__:
-```
+```javascript
 tags["output"]=DoubleSlash("C://RIT-Projects//Customer1//Project10",10);
 // gives output="????"
 ```
@@ -289,7 +294,7 @@ __Description__:
 Remove spaces on left and right and returns the length of the trimmed _string_.
 
 __Example__:
-```
+```javascript
 tags["product"]="    IBM Rational Tester            ";
 tags["output"]=trimlength(tags["product"]);
 // gives output=19
@@ -308,7 +313,7 @@ Get a property from the property file. The property must be in lower case!
 If property file is not provided, the file C:\config.properties used.
 
 __Example__:
-```
+```javascript
 tag["QueueToUse"]=GetCentralProperty("mq.mydomain.myenvironment.application1.application2");
 // Gives the applicable queue for that domain/environment combination.
 ```
@@ -321,7 +326,7 @@ __Description__:
 Some information shown in the consoleLog
 
 __Example__:
-```
+```javascript
 info();
 ```
 
@@ -333,7 +338,7 @@ __Description__:
 Write the message string to the consoleLog. If a logfile is specified it's appended to that file.
 
 __Example__:
-```
+```javascript
 log("Transaction started");
 log("Stub started now","C:/logs/mylog.log");
 ```
@@ -349,7 +354,7 @@ __Description__:
 Print out the characters of the string in ASCII codes to the consolelog.
 
 __Example__:
-```
+```javascript
 printBinConsole("IBM Rational Integration Tester")
 ```
 
@@ -361,7 +366,7 @@ __Description__:
 Equal to log without specification of log-file.
 
 __Example__:
-```
+```javascript
 printConsole("IBM Rational Integration Tester")
 ```
 
@@ -373,7 +378,7 @@ __Description__:
 There is a Action Function Sleep. Yes, but this can be embedded into a Action Function, within your script.
 
 __Example__:
-```
+```javascript
 sleep(10000)
 ```
 
@@ -383,18 +388,5 @@ sleep(10000)
 * http://business.vanlint5.nl/html2/rit-functions.html
 
 
-
-
-###Source###
-
-__Syntax__: function( argument) 
-
-__Description__:
-Some description
-
-__Example__:
-```
-code here
-```
 
 [Back](index.md)
