@@ -179,6 +179,14 @@
             name="trimlength"
             syntax="trimlength( string ) ">
       </function>
+      <function
+            displayName="String/midString"
+            functionClass="com.ibm.greenhat.examples.customfunctions.MidString"
+            maxParameters="3"
+            minParameters="2"
+            name="midString"
+            syntax="midString( sourcestring , leftTag [,rightTag] ) ">
+      </function>
    </extension>
 
 </plugin>
