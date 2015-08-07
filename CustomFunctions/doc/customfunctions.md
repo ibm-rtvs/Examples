@@ -256,6 +256,7 @@ tags["output"]=MsgID(24)
 | ---  | --- |
 | [DoubleSlash](customfunctions.md#DoubleSlash) | Generate a double slash string |
 | [Left](customfunctions.md#Left) | Left most X characters of a string |
+| [MidString](customfunctions.md#MidSting) | Returning substring identified by tags |
 | [Right](customfunctions.md#Right) | Right most X characters of a string |
 | [SingleSlash](customfunctions.md#SingleSlash) | Remove double shashes |
 | [Trimlength](customfunctions.md#Trimlength) | Give length of string without the leading and following spaces |
@@ -287,6 +288,21 @@ __Example__:
 tags["product"]="IBM Rational Tester";
 tags["output"]=left(tags["product"],3);
 // gives output="IBM"
+```
+
+###MidString###
+
+__Syntax__: midString(source,lefttag)
+            midString(source,lefttag,righttag)
+
+__Description__:
+Gives the left _length_ number of characters of the _string_.
+
+__Example__:
+```javascript
+tags["product"]="IBM [Rational] Tester";
+tags["output"]=midString(tags["product"],"[","]");
+// gives output="Rational"
 ```
 
 
